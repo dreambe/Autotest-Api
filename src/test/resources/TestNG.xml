@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ApiAutoTest">
+    <test verbose="2" name="all cases">
+        <classes>
+            <!-- 接口自动化测试入口-->
+            <class name="com.autotest.api.AutoTest"/>
+        </classes>
+
+    </test>
+    <listeners>
+        <listener class-name="com.autotest.api.listener.ExtentTestNGIReporterListener"></listener>
+        <listener class-name="com.autotest.api.listener.RetryListener"></listener>
+        <listener class-name="com.autotest.api.listener.AutoTestListener"></listener>
+    </listeners>
+</suite>
